@@ -5,7 +5,7 @@
 ###########
 
 Settings for `Preferences` -> `Package Settings` -> `Bracket Highlighter` ->
-`Key Bindings - User`
+`Settings - User`
 
 `{
 	"match_brackets_only_when_between": true,
