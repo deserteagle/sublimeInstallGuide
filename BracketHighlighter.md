@@ -26,7 +26,6 @@ Settings for `Preferences` -> `Package Settings` -> `Bracket Highlighter` ->
 	"tag_style"   : "outline"
 }`
 
-
 ## Coloring
 ###########
 

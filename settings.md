@@ -1,5 +1,7 @@
-# Settings and Keybindings
-##########################
+# Global Settings and Keybindings
+
+## Settings
+##########
 
 Default settings for some Packages and Sublime itself, these settings go
 to `Preferences` -> `Settings - User`
@@ -33,6 +35,8 @@ to `Preferences` -> `Settings - User`
 	"word_wrap": false
 }`
 
+## Keybindings
+##############
 
 Default global keybindings for packages and Sublime go to `Preferences` -> `Key Bindings - User`
 

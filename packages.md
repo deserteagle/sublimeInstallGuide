@@ -53,3 +53,4 @@ Title says it all
 	* "Pretty JSON" JSON formater
 	* "Theme Soda" skin for sublime
 	* "Sublipsum" lorem ipsum generator
+	* "StringEncode" string manipulating functions
