@@ -1,4 +1,4 @@
-# Function Name Display
+# Inline Calculator
 #######################
 
 Settings for `Preferences` -> `Package Settings` -> `Inline Calculator` ->
