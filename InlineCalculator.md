@@ -2,7 +2,7 @@
 #######################
 
 Settings for `Preferences` -> `Package Settings` -> `Inline Calculator` ->
-`Key Bindings - User`
+`Key Bindings - User`:
 
   [
     {
