@@ -7,7 +7,7 @@
 Settings for `Preferences` -> `Package Settings` -> `Bracket Highlighter` ->
 `Settings - User`
 
-	`{
+	{
 		"match_brackets_only_when_between": true,
 		"match_adjacent_only" : false,
 	
@@ -24,7 +24,7 @@ Settings for `Preferences` -> `Package Settings` -> `Bracket Highlighter` ->
 		"square_style": "outline",
 		"angle_style" : "solid",
 		"tag_style"   : "outline"
-	}`
+	}
 
 ## Coloring
 ###########
@@ -35,7 +35,7 @@ found usually in the sublime package directory (`Preferences` -> `Browse Package
 Open `Color Scheme - Default`, locate the `.tmTheme` file of your prefered Scheme
 and add these snippet into the `<array>` tag:
 
-	`<dict>
+	<dict>
 					<key>name</key>
 					<string>Bracket Tag</string>
 					<key>scope</key>
@@ -102,4 +102,4 @@ and add these snippet into the `<array>` tag:
 							<key>foreground</key>
 							<string>#449944</string>
 					</dict>
-			</dict>`
+			</dict>
