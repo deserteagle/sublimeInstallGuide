@@ -7,24 +7,24 @@
 Settings for `Preferences` -> `Package Settings` -> `Bracket Highlighter` ->
 `Settings - User`
 
-{
-	"match_brackets_only_when_between": true,
-	"match_adjacent_only" : false,
+	{
+		"match_brackets_only_when_between": true,
+		"match_adjacent_only" : false,
 
-	"quote_scope" : "bracket.quote",
-	"curly_scope" : "bracket.curly",
-	"round_scope" : "bracket.round",
-	"square_scope": "bracket.square",
-	"angle_scope" : "bracket.angle",
-	"tag_scope"   : "bracket.tag",
+		"quote_scope" : "bracket.quote",
+		"curly_scope" : "bracket.curly",
+		"round_scope" : "bracket.round",
+		"square_scope": "bracket.square",
+		"angle_scope" : "bracket.angle",
+		"tag_scope"   : "bracket.tag",
 
-	"quote_style" : "underline",
-	"curly_style" : "solid",
-	"round_style" : "outline",
-	"square_style": "outline",
-	"angle_style" : "solid",
-	"tag_style"   : "outline"
-}
+		"quote_style" : "underline",
+		"curly_style" : "solid",
+		"round_style" : "outline",
+		"square_style": "outline",
+		"angle_style" : "solid",
+		"tag_style"   : "outline"
+	}
 
 ## Coloring
 ###########
