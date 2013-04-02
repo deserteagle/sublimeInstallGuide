@@ -8,22 +8,299 @@ Settings for `Preferences` -> `Package Settings` -> `Bracket Highlighter` ->
 `Settings - User`
 
 	{
-		"match_brackets_only_when_between": true,
-		"match_adjacent_only" : false,
-
-		"quote_scope" : "bracket.quote",
-		"curly_scope" : "bracket.curly",
-		"round_scope" : "bracket.round",
-		"square_scope": "bracket.square",
-		"angle_scope" : "bracket.angle",
-		"tag_scope"   : "bracket.tag",
-
-		"quote_style" : "underline",
-		"curly_style" : "solid",
-		"round_style" : "outline",
-		"square_style": "outline",
-		"angle_style" : "solid",
-		"tag_style"   : "outline"
+		"debug_enable": false,
+		"icon_path": "BracketHighlighter/icons",
+		"show_unmatched" : true,
+		"high_visibility_style": "outline",
+		"high_visibility_color": "__bracket__",
+		"match_only_adjacent": false,
+		"search_threshold": 5000,
+		"bracket_string_escape_mode": "string",
+		"auto_selection_threshold" : 10,
+		"no_multi_select_icons": false,
+		"scope_brackets": [
+			{
+				"name": "py_single_quote",
+				"open": "u?r?((?:'')?')",
+				"close": "((?:'')?')",
+				"style": "single_quote",
+				"scopes": ["string"],
+				"language_filter": "whitelist",
+				"language_list": ["Python"],
+				"sub_bracket_search": "true",
+				"enabled": true
+			},
+			{
+				"name": "py_double_quote",
+				"open": "u?r?((?:\"\")?\")",
+				"close": "((?:\"\")?\")",
+				"style": "double_quote",
+				"scopes": ["string"],
+				"language_filter": "whitelist",
+				"language_list": ["Python"],
+				"sub_bracket_search": "true",
+				"enabled": true
+			},
+			{
+				"name": "single_quote",
+				"open": "(')",
+				"close": "(')",
+				"style": "single_quote",
+				"scopes": ["string"],
+				"language_filter": "blacklist",
+				"language_list": ["Plain text"],
+				"sub_bracket_search": "true",
+				"enabled": true
+			},
+			{
+				"name": "double_quote",
+				"open": "(\")",
+				"close": "(\")",
+				"style": "double_quote",
+				"scopes": ["string"],
+				"language_filter": "blacklist",
+				"language_list": ["Plain text"],
+				"sub_bracket_search": "true",
+				"enabled": true
+			},
+			{
+				"name": "jsregex",
+				"open": " *(/)",
+				"close": "(/)[igm]*",
+				"style": "regex",
+				"scopes": ["string"],
+				"language_filter": "whitelist",
+				"language_list": ["JavaScript"],
+				"sub_bracket_search": "true",
+				"enabled": true
+			},
+			{
+				"name": "perlregex",
+				"open": "(?:m|s|tr)(.|\n)",
+				"close": "(.|\n)(?:[igmos]*)",
+				"style": "regex",
+				"scopes": ["string.regexp"],
+				"language_filter": "whitelist",
+				"language_list": ["Perl"],
+				"sub_bracket_search": "true",
+				"enabled": true
+			},
+			{
+				"name": "rubyregex",
+				"open": " *(/)",
+				"close": "(/)[imxo]*",
+				"style": "regex",
+				"scopes": ["string"],
+				"language_filter": "whitelist",
+				"language_list": ["Ruby"],
+				"sub_bracket_search": "true",
+				"enabled": true
+			},
+			{
+				"name": "mditalic",
+				"open": "(\\*|_)",
+				"close": "(\\*|_)",
+				"style": "default",
+				"scopes": ["markup.italic"],
+				"language_filter": "whitelist",
+				"language_list": ["Markdown"],
+				"sub_bracket_search": "true",
+				"enabled": true
+			},
+			{
+				"name": "mdbold",
+				"open": "(\\*\\*|__)",
+				"close": "(\\*\\*|__)",
+				"style": "default",
+				"scopes": ["markup.bold"],
+				"language_filter": "whitelist",
+				"language_list": ["Markdown"],
+				"sub_bracket_search": "true",
+				"enabled": true
+			}
+		],
+		"brackets": [
+			{
+				"name": "curly",
+				"open": "(\\{)",
+				"close": "(\\})",
+				"style": "curly",
+				"scope_exclude": ["string", "comment"],
+				"scope_exclude_exceptions": ["string.other.math.block.environment.latex"],
+				"language_filter": "blacklist",
+				"language_list": ["Plain text"],
+				"find_in_sub_search": "true",
+				"ignore_string_escape": true,
+				"enabled": true
+			},
+			{
+				"name": "round",
+				"open": "(\\()",
+				"close": "(\\))",
+				"style": "round",
+				"scope_exclude_exceptions": ["string.other.math.block.environment.latex"],
+				"scope_exclude": ["string", "comment"],
+				"language_filter": "blacklist",
+				"language_list": ["Plain text"],
+				"find_in_sub_search": "true",
+				"ignore_string_escape": true,
+				"enabled": true
+			},
+			{
+				"name": "square",
+				"open": "(\\[)",
+				"close": "(\\])",
+				"style": "square",
+				"scope_exclude": ["string", "comment"],
+				"scope_exclude_exceptions": ["string.other.math.block.environment.latex"],
+				"language_filter": "blacklist",
+				"language_list": ["Plain text"],
+				"find_in_sub_search": "true",
+				"ignore_string_escape": true,
+				"enabled": true
+			},
+			{
+				"name": "html",
+				"open": "(<)(?=[\\w\\:\\-]+(?:(?:\\s+[\\w\\-:]+(?:\\s*=\\s*(?:\"[^\"]*\"|'[^']*'|[^>\\s]+))?)*)\\s*\\/?>|\\/[\\w\\:\\-]+[^>]*>)",
+				"close": "(?<=<)(?:[\\w\\:\\-]+(?:(?:\\s+[\\w\\-:]+(?:\\s*=\\s*(?:\"[^\"]*\"|'[^']*'|[^>\\s]+))?)*)\\s*\\/?|\\/[\\w\\:\\-]+[^>]*)(>)",
+				"style": "tag",
+				"scope_exclude": ["string", "comment"],
+				"language_filter": "whitelist",
+				"language_list": ["HTML", "HTML 5", "XML", "PHP"],
+				"plugin_library": "bh_modules.tags",
+				"find_in_sub_search": "only",
+				"enabled": false
+			},
+			{
+				"name": "cfml",
+				"open": "(<)(?=[\\w\\:\\-]+(?:(?:\\s+[\\w\\-\\.:]+(?:\\s*=\\s*(?:\"[^\"]*\"|'[^']*'|[^>\\s]+))?)*|(?:(?<=cfif)|(?<=cfelseif))[^>]+)\\s*\\/?>|\\/[\\w\\:\\-]+[^>]*>)",
+				"close": "(?<=<)(?:[\\w\\:\\-]+(?:(?:\\s+[\\w\\-\\.:]+(?:\\s*=\\s*(?:\"[^\"]*\"|'[^']*'|[^>\\s]+))?)*|(?:(?<=cfif)|(?<=cfelseif))[^>]+)\\s*\\/?|\\/[\\w\\:\\-]+[^>]*)(>)",
+				"style": "tag",
+				"scope_exclude": ["string", "comment"],
+				"language_filter": "whitelist",
+				"language_list": ["HTML+CFML", "ColdFusion", "ColdFusionCFC"],
+				"plugin_library": "bh_modules.tags",
+				"find_in_sub_search": "only",
+				"enabled": false
+			},
+			{
+				"name": "angle",
+				"open": "(<)",
+				"close": "(>)",
+				"style": "angle",
+				"scope_exclude": ["string", "comment", "keyword.operator"],
+				"language_filter": "whitelist",
+				"language_list": ["HTML", "HTML 5", "XML", "PHP", "HTML+CFML", "ColdFusion", "ColdFusionCFC"],
+				"plugin_library": "bh_modules.tags",
+				"enabled": true
+			},
+			{
+				"name": "cssedit_groups",
+				"open": "(/\\* *@group .*\\*/)",
+				"close": "(/\\* *@end *\\*/)",
+				"style": "default",
+				"scope_exclude": [],
+				"language_filter": "whitelist",
+				"language_list": ["CSS"],
+				"enabled": true
+			},
+			{
+				"name": "ruby",
+				"open": "(^\\s*\\b(?:if|case|until|unless|while|begin|class|module|def\\b\\s*[a-zA-Z_\\d]+)|do)\\b",
+				"close": "\\b(end)\\b",
+				"style": "default",
+				"scope_exclude": ["string", "comment"],
+				"plugin_library": "bh_modules.rubykeywords",
+				"language_filter": "whitelist",
+				"language_list": ["Ruby", "Ruby on Rails", "HTML (Rails)"],
+				"enabled": true
+			},
+			{
+				"name": "c_compile_switch",
+				"open": "(\\#(?:if|ifdef|ifndef))\\b",
+				"close": "(\\#endif)\\b",
+				"style": "default",
+				"scope_exclude": ["string", "comment"],
+				"language_filter": "whitelist",
+				"language_list": ["C++", "C", "Objective-C"],
+				"enabled": true
+			},
+			{
+				"name": "php_keywords",
+				"open": "(?:^\\s*|<\\?(?:php)?\\s*)?\\b(if|foreach|for|while|switch)\\b(?=.*:\\s*(?:\\?>\\s*)?$)",
+				"close": "(?:^\\s*|<\\?(?:php)?\\s*)?\\b(endif|endfor|endforeach|endwhile|endswitch)\\b(?=\\s*;\\s*(?:\\?>\\s*)?$)",
+				"style": "default",
+				"language_filter": "whitelist",
+				"scope_exclude": ["string", "comment"],
+				"plugin_library": "bh_modules.phpkeywords",
+				"language_list": ["HTML", "HTML 5", "XML", "PHP", "HTML+CFML", "ColdFusion", "ColdFusionCFC"],
+				"enabled": true
+			},
+			{
+				"name": "erlang",
+				"open": "\\s*(\\b(?:if|case|begin|try|fun(?=\\s*\\()|receive)\\b)",
+				"close": "\\b(end)\\b",
+				"style": "default",
+				"scope_exclude": ["string", "comment"],
+				"language_filter": "whitelist",
+				"language_list": ["Erlang", "HTML (Erlang)"],
+				"enabled": true
+			}
+		],
+		"bracket_styles": {
+			"default": {
+				"icon": "dot",
+				"color": "brackethighlighter.default"
+			},
+			"unmatched": {
+				"icon": "question",
+				"style": "outline"
+			},
+			"curly": {
+				"icon": "curly_bracket",
+				"color": "brackethighlighter.curly",
+				"style": "solid"
+			},
+			"round": {
+				"icon": "round_bracket",
+				"color": "brackethighlighter.round",
+				"style": "outline"
+			},
+			"square": {
+				"icon": "square_bracket",
+				"color": "brackethighlighter.square",
+				"style": "outline"
+			},
+			"angle": {
+				"icon": "angle_bracket",
+				"color": "brackethighlighter.angle"
+			},
+			"tag": {
+				"icon": "tag",
+				"color": "brackethighlighter.tag"
+			},
+			"single_quote": {
+				"icon": "single_quote",
+				"color": "brackethighlighter.quote",
+				"style": "underline"
+			},
+			"double_quote": {
+				"icon": "double_quote",
+				"color": "brackethighlighter.quote",
+				"style": "underline"
+			},
+			"regex": {
+				"icon": "regex",
+				"color": "brackethighlighter.quote"
+			}
+		},
+		"tag_style": "tag",
+		"tag_scope_exclude": ["string", "comment"],
+		"tag_mode": {
+			"xhtml": ["XML"],
+			"html": ["HTML", "HTML 5", "PHP"],
+			"cfml": ["HTML+CFML", "ColdFusion", "ColdFusionCFC"]
+		}
 	}
 
 ## Coloring
@@ -39,7 +316,7 @@ and add these snippet into the `<array>` tag:
 			<key>name</key>
 			<string>Bracket Tag</string>
 			<key>scope</key>
-			<string>bracket.tag</string>
+			<string>brackethighlighter.tag</string>
 			<key>settings</key>
 			<dict>
 					<key>foreground</key>
@@ -50,7 +327,7 @@ and add these snippet into the `<array>` tag:
 			<key>name</key>
 			<string>Bracket Curly</string>
 			<key>scope</key>
-			<string>bracket.curly</string>
+			<string>brackethighlighter.curly</string>
 			<key>settings</key>
 			<dict>
 					<key>foreground</key>
@@ -63,7 +340,7 @@ and add these snippet into the `<array>` tag:
 			<key>name</key>
 			<string>Bracket Round</string>
 			<key>scope</key>
-			<string>bracket.round</string>
+			<string>brackethighlighter.round</string>
 			<key>settings</key>
 			<dict>
 					<key>foreground</key>
@@ -74,7 +351,7 @@ and add these snippet into the `<array>` tag:
 			<key>name</key>
 			<string>Bracket Square</string>
 			<key>scope</key>
-			<string>bracket.square</string>
+			<string>brackethighlighter.square</string>
 			<key>settings</key>
 			<dict>
 					<key>foreground</key>
@@ -85,7 +362,7 @@ and add these snippet into the `<array>` tag:
 			<key>name</key>
 			<string>Bracket Angle</string>
 			<key>scope</key>
-			<string>bracket.angle</string>
+			<string>brackethighlighter.angle</string>
 			<key>settings</key>
 			<dict>
 					<key>foreground</key>
@@ -96,7 +373,7 @@ and add these snippet into the `<array>` tag:
 			<key>name</key>
 			<string>Bracket Quote</string>
 			<key>scope</key>
-			<string>bracket.quote</string>
+			<string>brackethighlighter.quote</string>
 			<key>settings</key>
 			<dict>
 					<key>foreground</key>
