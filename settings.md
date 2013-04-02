@@ -6,7 +6,7 @@
 Default settings for some Packages and Sublime itself, these settings go
 to `Preferences` -> `Settings - User`
 
-`{
+{
 	"bold_folder_labels": true,
 	"caret_style": "phase",
 	"color_scheme": "Packages/Color Scheme - Default/SunburstExtendet.tmTheme",
@@ -33,14 +33,14 @@ to `Preferences` -> `Settings - User`
 	},
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": false
-}`
+}
 
 ## Keybindings
 ##############
 
 Default global keybindings for packages and Sublime go to `Preferences` -> `Key Bindings - User`
 
-`[
+[
 	{ "keys": ["ctrl+g"], "command": "expand_selection", "args": {"to": "line"} },
 	{ "keys": ["ctrl+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
 	{ "keys": ["ctrl+e"], "command": "toggle_comment", "args": { "block": false } },
@@ -59,4 +59,4 @@ Default global keybindings for packages and Sublime go to `Preferences` -> `Key 
 	{ "keys": ["ctrl+t"], "command": "side_bar_new_file2" },
 	{ "keys": ["f2"], "command": "side_bar_rename" },
 	{ "keys": ["ctrl+alt+f"], "command": "side_bar_find_files_path_containing" }
-]`
+]
