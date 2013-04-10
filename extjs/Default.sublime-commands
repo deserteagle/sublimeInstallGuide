@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "Unicode: encodeUnicode",
+        "command": "convert_to_unicode_notation"
+    },
+    {
+        "caption": "Unicode: decodeUnicode",
+        "command": "convert_from_unicode_notation"
+    }
+]
