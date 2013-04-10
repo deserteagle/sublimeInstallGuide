@@ -55,3 +55,4 @@ Title says it all
 	* "Sublipsum" lorem ipsum generator
 	* "StringEncode" string manipulating functions
 	* "extjs" snippets and unicode encode/decode commands
+	* "git" git integration
