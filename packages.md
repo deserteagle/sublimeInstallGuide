@@ -52,7 +52,7 @@ Title says it all
 	* "Function Name Display" displays the current function name in the status bar
 	* "Pretty JSON" JSON formater
 	* "Theme Soda" skin for sublime
-	* "Sublipsum" lorem ipsum generator
+	* "Sublimipsum" lorem ipsum generator
 	* "StringEncode" string manipulating functions
 	* "extjs" snippets and unicode encode/decode commands
 	* "git" git integration
