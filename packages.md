@@ -54,3 +54,4 @@ Title says it all
 	* "Theme Soda" skin for sublime
 	* "Sublipsum" lorem ipsum generator
 	* "StringEncode" string manipulating functions
+	* "extjs" snippets and unicode encode/decode commands
