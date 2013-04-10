@@ -19,3 +19,8 @@ Development Build:
 
 The PPA is set up by a guy for *personal use*, so maybe the PPA fails some day. You can find
 the blog and original source for this PPA [here](http://www.webupd8.org/2011/03/sublime-text-2-ubuntu-ppa.html "webupd8.org")
+
+Documentation
+=============
+
+[http://docs.sublimetext.info/en/latest/](http://docs.sublimetext.info/en/latest/ "Sublime Text 2 Documentation")
