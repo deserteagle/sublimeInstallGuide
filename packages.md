@@ -25,6 +25,8 @@ This plugins are nearly required for a smooth and usable IDE:
 	* "Emmet"/"ZenCoding" html helper
 	* "SideBarEnhancements" better contextmenue for the sidebar
 	* "sublimelint" syntax linter for sublime
+	* "ctags" offers go-to-definition stuff
+	* "ctags for php" with some extended features, requires "ctags"
 
 Details and settings for these packages can be found in their
 corresponding documentation.
