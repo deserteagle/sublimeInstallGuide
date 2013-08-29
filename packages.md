@@ -43,6 +43,7 @@ These packages are quite handy and recommended for extensive usage
 	* "Inline Calculator" solving simple mathematical expressions within the editor
 	* "jQuery" ready to use jQuery snippets
 	* "SublimeTODO" //@TODO: (etc.) processor
+	* "changetracker" displays unsaved changes to a file by adding a bullet to the lines in question
 
 ## Noteworthy Packages
 ######################
@@ -58,3 +59,5 @@ Title says it all
 	* "StringEncode" string manipulating functions
 	* "extjs" snippets and unicode encode/decode commands
 	* "git" git integration
+	* "GernateUUID" UUID generator
+	* "WordCount" counts words, chars etc. in buffer
