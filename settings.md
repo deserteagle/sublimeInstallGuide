@@ -56,7 +56,9 @@ Default global keybindings for packages and Sublime go to `Preferences` -> `Key 
 				{ "key": "setting.tab_completion", "operator": "equal", "operand": true }
 			]
 		},
-		{ "keys": ["ctrl+t"], "command": "side_bar_new_file2" },
+		{ "keys": ["ctrl+alt+n"], "command": "side_bar_new_file2" },
 		{ "keys": ["f2"], "command": "side_bar_rename" },
-		{ "keys": ["ctrl+alt+f"], "command": "side_bar_find_files_path_containing" }
+		{ "keys": ["ctrl+alt+f"], "command": "side_bar_find_files_path_containing" },
+		{ "keys": ["ctrl+shift+k"], "command": "find_under_expand_skip" },
+		{ "keys": ["ctrl+shift+period"], "command": "navigate_to_definition" }
 	]
