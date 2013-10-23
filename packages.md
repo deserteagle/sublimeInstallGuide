@@ -44,6 +44,7 @@ These packages are quite handy and recommended for extensive usage
 	* "jQuery" ready to use jQuery snippets
 	* "SublimeTODO" //@TODO: (etc.) processor
 	* "changetracker" displays unsaved changes to a file by adding a bullet to the lines in question
+	* "jslint" javascript linter
 
 ## Noteworthy Packages
 ######################
